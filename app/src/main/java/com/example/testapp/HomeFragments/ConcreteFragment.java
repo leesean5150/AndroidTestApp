@@ -1,4 +1,4 @@
-package com.example.testapp;
+package com.example.testapp.HomeFragments;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.testapp.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SuggestedFragment#newInstance} factory method to
+ * Use the {@link ConcreteFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SuggestedFragment extends Fragment {
+public class ConcreteFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class SuggestedFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public SuggestedFragment() {
+    public ConcreteFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class SuggestedFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment SuggestedFragment.
+     * @return A new instance of fragment ConcreteFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SuggestedFragment newInstance(String param1, String param2) {
-        SuggestedFragment fragment = new SuggestedFragment();
+    public static ConcreteFragment newInstance(String param1, String param2) {
+        ConcreteFragment fragment = new ConcreteFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class SuggestedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.suggestion_fragment, container, false);
+        return inflater.inflate(R.layout.concrete_fragment, container, false);
     }
 }
