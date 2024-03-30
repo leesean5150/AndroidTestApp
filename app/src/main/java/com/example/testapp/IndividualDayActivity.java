@@ -4,14 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.view.View;
 import android.widget.TextView;
+
+import com.example.testapp.MainFragments.CalendarFragment;
 
 public class IndividualDayActivity extends AppCompatActivity {
     String date;
     String year;
     TextView ddmm;
     TextView yyyy;
-
+    TextView backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +29,14 @@ public class IndividualDayActivity extends AppCompatActivity {
         yyyy = findViewById(R.id.year_display);
         ddmm.setText(date);
         yyyy.setText(year);
+        backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IndividualDayActivity.this, MainActivity.class);
+                intent.putExtra("from_calendar", true);
+                startActivity(intent);
+            }
+        });
     }
 }
