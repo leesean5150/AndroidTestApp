@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         boolean fromCalendar = intent.getBooleanExtra("from_calendar", false);
         if (fromCalendar) {
             replaceFragment(new CalendarFragment());
+            binding.bottomNavigationView.setSelectedItemId(R.id.CalendarNav);
         } else {
             replaceFragment(new HomeFragment());
         }
