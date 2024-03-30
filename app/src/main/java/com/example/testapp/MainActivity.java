@@ -9,6 +9,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.testapp.MainFragments.CalendarFragment;
+import com.example.testapp.MainFragments.HomeFragment;
+import com.example.testapp.MainFragments.ProfileFragment;
 import com.example.testapp.databinding.ActivityMainBinding;
 import com.google.android.material.navigation.NavigationBarView;
 

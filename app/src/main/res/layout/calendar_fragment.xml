@@ -3,11 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    >
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Calendar Fragment"/>
+        android:layout_height="wrap_content"
+        android:fontFamily="@raw/varela_round_regular"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:text="@string/calendar_header"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+    <CalendarView
+        android:id="@+id/calendarOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
