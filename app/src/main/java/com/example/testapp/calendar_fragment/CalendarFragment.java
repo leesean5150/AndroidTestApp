@@ -1,24 +1,20 @@
-package com.example.testapp.HomeFragments;
+package com.example.testapp.calendar_fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
-import com.example.testapp.MapAndOverlayActivity;
+import androidx.fragment.app.Fragment;
+
 import com.example.testapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ConcreteFragment#newInstance} factory method to
+ * Use the {@link CalendarFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConcreteFragment extends Fragment {
+public class CalendarFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,8 +24,8 @@ public class ConcreteFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    Button plusButton;
-    public ConcreteFragment() {
+
+    public CalendarFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +35,11 @@ public class ConcreteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ConcreteFragment.
+     * @return A new instance of fragment HomeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ConcreteFragment newInstance(String param1, String param2) {
-        ConcreteFragment fragment = new ConcreteFragment();
+    public static CalendarFragment newInstance(String param1, String param2) {
+        CalendarFragment fragment = new CalendarFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,16 +59,7 @@ public class ConcreteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.concrete_fragment, container, false);
-        plusButton = view.findViewById(R.id.debugAddEventButton);
-        plusButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MapAndOverlayActivity.class);
-                startActivity(intent);
-            }
-        });
-        return view;
-
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.calendar_fragment, container, false);
     }
 }
