@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".IndividualDayActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".MapAndOverlayActivity" android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

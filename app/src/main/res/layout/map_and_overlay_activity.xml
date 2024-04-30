@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/rounded_sheet">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_remove_24"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center|top"/>
+        <TextView
+            android:id="@+id/always_visible_component"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Always Visible"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="30dp"
+            android:visibility="visible" />
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
